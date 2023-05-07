@@ -77,7 +77,6 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }}/>
           <FormControl variant="standard">
             <LogoutButton />
           </FormControl>
@@ -131,7 +130,6 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
             <FormControl variant="standard">
               <LogoutButton />
             </FormControl>

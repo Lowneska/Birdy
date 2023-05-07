@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import {
+  FOLLOW_USER,
+  GET_USER,
+  UNFOLLOW_USER,
+  UPDATE_BIO,
+  UPLOAD_PICTURE,
+} from "../action/user.action"
 /* Initialisation de l'état de l'application */
 const initialState = {
   mode: "light",
@@ -17,8 +23,8 @@ export const authSlice = createSlice({
       state.mode = state.mode === "light" ? "dark" : "light";
     },
     setLogin: (state, action) => {
-      state.user = action.user;
-      state.token = action.token;
+      state.user = action.payload.user;
+      state.token = action.payload.token;
     },
     setLogout: (state) => {
       state.user = null;
@@ -42,6 +48,38 @@ export const authSlice = createSlice({
       state.posts = updatedPosts;
     },
   },
+  extraReducers: (builder) => {
+    builder
+      .addCase(GET_USER, (state, action) => {
+        return action.payload;
+      })
+      .addCase(UPLOAD_PICTURE, (state, action) => {
+        return {
+          ...state,
+          picture: action.payload,
+        };
+      })
+      .addCase(UPDATE_BIO, (state, action) => {
+        return {
+          ...state,
+          bio: action.payload,
+        };
+      })
+      .addCase(FOLLOW_USER, (state, action) => {
+        return {
+          ...state,
+          following: [action.payload.idToFollow, ...state.following],
+        };
+      })
+      .addCase(UNFOLLOW_USER, (state, action) => {
+        return {
+          ...state,
+          following: state.following.filter(
+            (id) => id !== action.payload.idToUnfollow
+          ),
+        };
+      });
+    },
 });
 
 export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =

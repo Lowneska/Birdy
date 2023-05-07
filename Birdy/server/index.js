@@ -48,6 +48,7 @@ const upload = multer({ storage });
 /* ROUTES WITH FILES */
 app.get('*', checkUser);
 app.use("/auth", routeAuth);
+app.use("/user", routeUser);
 app.use("/interact", routePoste);
 app.use("/", routeUser);
 /* MONGOOSE SETUP */

@@ -10,6 +10,7 @@ import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "../theme";
 import axios from 'axios';
 import { useDispatch } from "react-redux";
+import { getUser } from "../action/user.action"
 
 const MainPage = (props) => {
 	const mode = useSelector((state) => state.mode);
@@ -33,7 +34,9 @@ const MainPage = (props) => {
 			.catch((err) => {
 				console.log("No token");
 			})
-	}, [uid]);
+			if (uid) 
+				dispatch(getUser(uid));
+	}, [uid, dispatch]);
 	
 	const getConnected = (user) =>{
 			setConnected(0);

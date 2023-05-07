@@ -18,7 +18,12 @@ const Login = (props) => {
 	const isNonMobile = useMediaQuery("(min-width:600px)");
 	const dispatch = useDispatch();
 	
-
+	function submitForm(data) {
+		return {
+		  type: 'SUBMIT_FORM',
+		  payload: data
+		};
+	  }
 	const handleLogin = (event) => {
 		event.preventDefault();
 		const loginError = document.querySelector(".error");
@@ -33,14 +38,6 @@ const Login = (props) => {
 			})
 			.then((res) => {
 				props.login();
-				const logs= JSON.stringify(res.data);
-				console.log(logs)
-				if (logs) {dispatch(
-					setLogin({
-					  user: logs.user,
-					  token: logs.token,
-					})
-				  )};
 				})
 			.catch((err) => {
 				loginError.innerHTML = "Nom d'utilisateur ou mot de passe incorrect.";

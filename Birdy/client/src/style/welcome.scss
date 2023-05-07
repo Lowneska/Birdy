@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins';
+}
+
+body{
+	
+	background: #8185bb;
+	background-attachment: fixed;
+}
+
+.form-around{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-login{
+	width: 25vw;
+	height: 60vh;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+}
+
+.form_form{
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.pass, .log{
+	border: none;
+	border-radius: 100px;
+	outline: none;
+	background-color: rgba(140, 150, 179, 0.568);
+	padding-bottom: 15px;
+	padding-top: 15px;
+	width: 80%;
+	padding-left: 20px;
+}
+
+.login_bt{
+	width: 100%;
+	background: none;
+	border: none;
+	background-color: rgb(236, 218, 116);
+	border-radius: 100px;
+	color: rgb(255, 255, 255);
+	padding: 15px;
+	align-content: center;
+	cursor: pointer;
+}
+
+.signin_bt{
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #ffa2d8;
+}
+
+.form-around h1{
+	font-weight: lighter;
+	font-size: 25px;
+}

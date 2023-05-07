@@ -1,0 +1,25 @@
+.profil-picture{
+	border-radius: 50%;
+	width: 40%;
+	height: 40%;
+}
+
+.profil{
+	background-color: rgba(255, 255, 255, 0.3);
+	width: 20%;
+	padding: 30px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	max-height: 370px;
+	margin-right: 25px;
+	margin-top: 30px;
+	margin-left: 25px;
+	justify-content: space-evenly;
+}
+
+.profil h1{
+	font-weight: 400;
+}

@@ -1,0 +1,27 @@
+.bando{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.publication{
+	padding: 30px;
+	border: 2px solid rgb(6, 1, 75);
+	border-top: none;
+}
+
+.prof{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+.bando h1{
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+.img-pub{
+	border-radius: 20px;
+}

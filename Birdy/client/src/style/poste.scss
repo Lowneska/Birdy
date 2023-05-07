@@ -1,0 +1,26 @@
+.poste{
+	border: 2px solid rgb(6, 1, 75);
+	border-top: none;
+}
+
+.poste textarea{
+	padding: 20px;
+	background: none;;
+	position: relative;
+	outline: none;
+	resize: none;
+	border: none;
+	width: 95%;
+	height: 77%;
+}
+
+.poste textarea:focus ~ label{
+	opacity: 0;
+}
+.poste label{
+	position: relative;
+	bottom: 120px;
+	left: 21px;
+}
+
+
